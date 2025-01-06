@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Streaming Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>SKEPSIS PLAY</h1>
+    <div class="search-container">
+      <label for="search-input" class="sr-only">Search</label>
+      <input type="text" id="search-input" placeholder="Search for movies or series...">
+      <button id="search-button">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Homepage Content -->
+    <section id="homepage">
+      <h2>Genres</h2>
+      <div class="genres">
+        <button class="genre-button" data-genre="action">Action</button>
+        <button class="genre-button" data-genre="comedy">Comedy</button>
+        <button class="genre-button" data-genre="drama">Drama</button>
+        <button class="genre-button" data-genre="horror">Horror</button>
+        <button class="genre-button" data-genre=:"fantasy">Fantasy</button>
+        <button class="genre-button" data-genre=:"revenge">Revenge</button>
+        <button class="genre-button" data-genre=:"sci-fi">Sci-Fi</button>
+      </div>
+
+      <h2>Recommendations</h2>
+      <div id="recommendations" class="recommendations-container"></div>
+    </section>
+
+    <!-- Search Results -->
+    <section id="search-results" hidden>
+      <h2>Search Results</h2>
+      <div id="suggestions" class="suggestions-container"></div>
+    </section>
+
+    <!-- Movie Details -->
+    <section id="movie-details" hidden>
+      <h2>Movie Details</h2>
+      <div id="content" class="details-container">
+        <!-- Movie details and trailer will be dynamically inserted here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Streaming Section -->
+    <section id="streaming">
+      <h2>Stream Content</h2>
+      <div class="stream-container">
+        <label for="imdb-code" class="sr-only">IMDb Code</label>
+        <input type="text" id="imdb-code" placeholder="Enter IMDb Code (e.g., tt1285016)">
+        <button id="stream-button">Stream</button>
+      </div>
+      <div id="stream-content" class="stream-content-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
